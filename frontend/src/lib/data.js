@@ -8,7 +8,55 @@ export const PROFILE = {
   location: "Available worldwide · Remote",
   email: "victormirmav00@gmail.com",
   linkedin: "https://www.linkedin.com/in/joao-victor-t-4a2b6085/",
+  portraitUrl:
+    "https://customer-assets.emergentagent.com/job_marketing-genius-3d/artifacts/tonkprto_me.jpg",
 };
+
+// Real Baby Phat campaign creatives (provided by JVT)
+export const BABY_PHAT_GALLERY = [
+  {
+    src: "https://customer-assets.emergentagent.com/job_marketing-genius-3d/artifacts/48zh9uqz_Baby%20PhatFeed%201.jpg",
+    cluster: "Cluster B",
+    stage: "MOFU",
+    title: "The Perfect Gift Does Exist",
+    note: "Mother's Day duo — aspirational lifestyle, brand-led hook.",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_marketing-genius-3d/artifacts/wgk2mctd_EOS-4x5-14.png",
+    cluster: "Cluster A",
+    stage: "TOFU",
+    title: "Blue Noir — Denim Corset",
+    note: "Y2K editorial. Price-led cold prospecting.",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_marketing-genius-3d/artifacts/s8iqmv65_EOS-4x5-13.png",
+    cluster: "Cluster A",
+    stage: "TOFU",
+    title: "Monogram — End of Season",
+    note: "Discount stack against editorial backdrop. High thumb-stop.",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_marketing-genius-3d/artifacts/vf2hmf9s_EOS-4x5-11.png",
+    cluster: "Cluster D",
+    stage: "BOFU",
+    title: "Brooke Cargo — Catalog",
+    note: "Conversion workhorse. PDP-style retargeting.",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_marketing-genius-3d/artifacts/s2gndhco_EOS-4x5-40.png",
+    cluster: "Cluster B",
+    stage: "MOFU",
+    title: "Winter Editorial — Red Puffer",
+    note: "Seasonal flag-bearer. Aspirational color block.",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_marketing-genius-3d/artifacts/tyryl8h7_Photo%20Nov%2027%202023%2C%201%2002%2029%20AM.jpg",
+    cluster: "Brand Anchor",
+    stage: "TOFU + Brand",
+    title: "Kimora — Editorial",
+    note: "Founder-led brand equity. Trust + authority.",
+  },
+];
 
 export const SERVICES = [
   {

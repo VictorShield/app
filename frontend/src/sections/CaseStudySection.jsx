@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedNumber from "../components/AnimatedNumber";
+import BabyPhatGallery from "../components/BabyPhatGallery";
 import { HEADLINE_METRICS, KILLED, PUSHBACKS } from "../lib/data";
 
 export default function CaseStudySection() {
@@ -53,7 +54,7 @@ export default function CaseStudySection() {
           className="col-span-12 lg:col-span-8 relative aspect-[4/3] lg:aspect-[16/10] overflow-hidden border border-white/10"
         >
           <img
-            src="https://images.pexels.com/photos/16652535/pexels-photo-16652535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1440"
+            src="https://customer-assets.emergentagent.com/job_marketing-genius-3d/artifacts/48zh9uqz_Baby%20PhatFeed%201.jpg"
             alt="Baby Phat case study"
             loading="lazy"
             className="w-full h-full object-cover"
@@ -99,6 +100,9 @@ export default function CaseStudySection() {
           ))}
         </div>
       </div>
+
+      {/* Baby Phat creative gallery */}
+      <BabyPhatGallery />
 
       {/* Headline metrics */}
       <div className="mb-20">

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PROFILE } from "../lib/data";
 
 export default function PhilosophySection() {
   return (
@@ -22,10 +23,10 @@ export default function PhilosophySection() {
             className="relative aspect-[4/5] overflow-hidden border border-white/10"
           >
             <img
-              src="https://images.pexels.com/photos/17513315/pexels-photo-17513315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=720"
-              alt="Portrait"
+              src={PROFILE.portraitUrl}
+              alt="João Victor Tavares portrait"
               loading="lazy"
-              className="w-full h-full object-cover grayscale"
+              className="w-full h-full object-cover grayscale contrast-[1.05]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-400 flex justify-between">
