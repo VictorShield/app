@@ -61,6 +61,34 @@ let webpackConfig = {
 };
 
 webpackConfig.devServer = (devServerConfig) => {
+  // Migrate legacy webpack-dev-server v4 options to v5
+  if ("https" in devServerConfig) {
+    if (devServerConfig.https) {
+      devServerConfig.server =
+        typeof devServerConfig.https === "object"
+          ? { type: "https", options: devServerConfig.https }
+          : "https";
+    }
+    delete devServerConfig.https;
+  }
+  if ("http2" in devServerConfig) delete devServerConfig.http2;
+
+  // Strip legacy webpack-dev-server v4 options not supported in v5
+  // (react-scripts still emits these; webpack-dev-server v5 rejects them)
+  if (devServerConfig.onAfterSetupMiddleware) {
+    const legacyAfter = devServerConfig.onAfterSetupMiddleware;
+    delete devServerConfig.onAfterSetupMiddleware;
+    const legacyBefore = devServerConfig.onBeforeSetupMiddleware;
+    delete devServerConfig.onBeforeSetupMiddleware;
+    const existingSetup = devServerConfig.setupMiddlewares;
+    devServerConfig.setupMiddlewares = (middlewares, devServer) => {
+      if (legacyBefore) legacyBefore(devServer);
+      const result = existingSetup ? existingSetup(middlewares, devServer) : middlewares;
+      if (legacyAfter) legacyAfter(devServer);
+      return result;
+    };
+  }
+
   // Add health check endpoints if enabled
   if (config.enableHealthCheck && setupHealthEndpoints && healthPluginInstance) {
     const originalSetupMiddlewares = devServerConfig.setupMiddlewares;
