@@ -1,0 +1,91 @@
+{
+  "theme": "dark",
+  "archetype": "5 (Luxury)",
+  "vibe": "Cinematic, moody, expensive feel. Data-driven but visually bold. Y2K elements for case study.",
+  "typography": {
+    "fonts": [
+      "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap",
+      "https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700,400,900&display=swap"
+    ],
+    "headings": {
+      "family": "Cabinet Grotesk, sans-serif",
+      "style": "uppercase, tracking-tighter for large text, font-black or font-bold",
+      "hierarchy": {
+        "h1": "text-5xl sm:text-6xl lg:text-7xl",
+        "h2": "text-3xl sm:text-4xl lg:text-5xl",
+        "h3": "text-xl sm:text-2xl"
+      }
+    },
+    "body": {
+      "family": "IBM Plex Sans, sans-serif",
+      "size": "text-base lg:text-lg"
+    },
+    "mono": {
+      "family": "JetBrains Mono, monospace",
+      "usage": "Data points, stats, metrics, labels, uppercase small tracking-widest."
+    }
+  },
+  "colors": {
+    "background": "#050505",
+    "surface": "#121212",
+    "foreground": "#F5F5F5",
+    "muted": "#A1A1AA",
+    "primary": "#F5F5F5",
+    "accent1": "#2563EB",
+    "accent2": "#EC4899",
+    "border": "rgba(255, 255, 255, 0.15)"
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous Spacing (p-12 to p-32 for sections). Asymmetrical layouts. Never default to simple centered grids.",
+    "matrix_grid": "The 'Control Room' Bento Grid. Grid-cols-4 for desktop, Grid-cols-2 tablet, Grid-cols-1 mobile. Dense gaps (gap-4 or gap-6). Technical borders.",
+    "section_padding": "py-24 sm:py-32"
+  },
+  "surface_strategies": {
+    "header": "Crystal Glassmorphism (bg-black/60, backdrop-blur-xl, border-b border-white/10). Sticky.",
+    "cards": "Grid Borders ('Technical' Look) - border-border, bg-surface, sharp corners or very subtle rounding (rounded-sm), no shadow or subtle neon glow on hover.",
+    "hero_overlay": "Gradient overlay if over image, max bg-black/50."
+  },
+  "motion_and_interactions": {
+    "scroll": "Smooth scrolling via @studio-freight/react-lenis is MANDATORY.",
+    "3d_hero": "React Three Fiber (@react-three/fiber, @react-three/drei). Render an abstract floating metallic mesh or geometric object that reacts to mouse/scroll.",
+    "marquee": "react-fast-marquee for editorial ribbon separating sections (e.g., 'CREATIVE STRATEGY • FUNNEL OPTIMIZATION').",
+    "framer_motion": "Fade up text reveals, stagger children in lists, animated numbers for stats."
+  },
+  "media": {
+    "image_urls": {
+      "joao_portrait": {
+        "url": "https://images.pexels.com/photos/17513315/pexels-photo-17513315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Artistic dark portrait of a man, used in the About / Philosophy section."
+      },
+      "baby_phat_case_study": {
+        "url": "https://images.pexels.com/photos/16652535/pexels-photo-16652535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Y2K denim streetwear model, used as the anchor image for the Baby Phat Case Study."
+      },
+      "abstract_background": {
+        "url": "https://images.pexels.com/photos/29703885/pexels-photo-29703885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Dark metallic 3D render, can be used as a texture or fallback for the hero/services section."
+      }
+    }
+  },
+  "component_instructions": {
+    "hero": "min-h-screen. Absolute inset-0 for R3F Canvas. Pointer events none for canvas wrapper. Big H1 'JOÃO VICTOR TAVARES' and subtitle 'Creative Marketing Strategist'.",
+    "about": "Asymmetric layout. Text block on one side, joao_portrait on the other. Include email (victormirmav00@gmail.com).",
+    "case_study": "Baby Phat: Rebuilding the Creative Engine. Anchor piece. Include baby_phat_case_study image. Highlight metrics using Framer Motion animated counters. ROAS 1.82x->3.47x (+90.6%), CAC -47.5%, Hook Rate +88.5%, Hold Rate +132%, Thumb-stop CTR +157%, Revenue $728K->1.39M. Detail 'kill discipline' and 'testing roadmap'.",
+    "hook_matrix": "Visualized 4x3 Hook-Cluster Matrix. 4 clusters (A/B/C/D) x 3 stages (TOFU/MOFU/BOFU). Use a dense bento grid with technical borders.",
+    "services": "List out: Creative Strategy, Hook Frameworks, Performance Creative, Funnel Optimization. Use large typography.",
+    "contact": "Contact form (Name, Email, Message) using Shadcn primitives heavily customized (dark borders, transparent backgrounds). Include LinkedIn link (https://www.linkedin.com/in/joao-victor-t-4a2b6085/).",
+    "testing": "MUST include data-testid attributes for interactive elements (e.g., data-testid='contact-submit-button')."
+  },
+  "packages_to_install": [
+    "three",
+    "@react-three/fiber",
+    "@react-three/drei",
+    "framer-motion",
+    "framer-motion-3d",
+    "@studio-freight/react-lenis",
+    "react-fast-marquee",
+    "@phosphor-icons/react",
+    "clsx",
+    "tailwind-merge"
+  ]
+}
